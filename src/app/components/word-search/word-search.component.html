@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm">
+            <h4>Words Grid</h4>
+            <table class="table table-bordered">
+                <tr *ngFor="let rows of gridData">
+                    <td *ngFor="let col of rows">
+                        {{col}}
+                    </td>
+                </tr>
+            </table>
+            <button type="button" class="btn btn-primary" (click)="findWords()">Find Words</button>
+        </div>
+        <div class="col-sm">
+            <h4>Search Words</h4>
+            <table class="table table-striped table-bordered">
+                <tr *ngFor="let rows of searchWords">
+                    <td> {{rows}} </td>
+                </tr>
+            </table>
+        </div>
+        <div class="col-sm">
+            <h4>Search Results</h4>
+            <table class="table table-striped table-bordered">
+                <tr *ngFor="let rows of serachResults">
+                    <td> {{rows.result}} </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
